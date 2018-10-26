@@ -1,7 +1,8 @@
 <template>
-  <div class="container">
-    明若清渊
-  </div>
+  <el-container>
+    <el-header>Header</el-header>
+    <el-main>Main</el-main>
+  </el-container>
 </template>
 
 <script>
@@ -9,22 +10,24 @@ const HomeKey = 'Home'
 export default {
   components: {},
   created: function() {
-    console.log(this.$store.state.modules[HomeKey].name)
+    // 获取state
+    // console.log(this.$store.state.modules[HomeKey].name)
   },
   methods: {}
 }
 </script>
 
-<style>
-.container {
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+<style lang="scss">
+.el-header {
+  background-color: #b3c0d1;
+  color: #333;
   text-align: center;
-  background: powderblue;
-  color: #fff;
-  font-size: 27px;
+  line-height: 60px;
+}
+
+.el-main {
+  background-color: #e9eef3;
+  color: #333;
+  height: 600px;
 }
 </style>
